@@ -2,8 +2,6 @@
 
 A real-time multimodal system that combines **facial emotion recognition** and **body pose estimation** to predict student engagement states via webcam.
 
-[example_display.webm](https://github.com/user-attachments/assets/9cff5a4d-1ea0-4767-a05e-84eba1950979)
-
 ---
 
 ## What It Does
@@ -78,6 +76,7 @@ Outputs a `.keras` model, a normalization parameters JSON, and a `training_histo
 
 ### 3. Run Real-Time Analysis
 
+
 ```bash
 python main.py --mode analyze \
   --state-model-path trained_models/my_state_predictor.keras \
@@ -99,3 +98,7 @@ The state predictor is a multi-input neural network:
 - **Output** — softmax over 5 student states
 
 Training includes class balancing (resampling) and optional data augmentation (noise injection, probability variation) to handle imbalanced collected data.
+
+## Example Usage
+
+[example_display.webm](https://github.com/user-attachments/assets/9cff5a4d-1ea0-4767-a05e-84eba1950979)
